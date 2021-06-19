@@ -4,23 +4,22 @@ plugins {
 
 kotlin {
     explicitApi = null
-    js {
+    js(IR) {
         browser {
-            webpackTask {
+            commonWebpackConfig {
+                //Css support must be turned off not to conflict with ring-ui rules
                 cssSupport.enabled = false
             }
-
-            runTask {
-                cssSupport.enabled = false
-            }
-
             testTask {
                 useKarma {
                     useChromeHeadless()
-                    webpackConfig.cssSupport.enabled = true
                 }
             }
         }
         binaries.executable()
     }
+}
+
+dependencies{
+    implementation(rootProject)
 }
