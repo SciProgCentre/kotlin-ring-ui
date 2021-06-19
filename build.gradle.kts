@@ -33,7 +33,7 @@ kotlin {
 }
 
 ksciencePublish{
-    github("visionforge")
+    github("ring-ui-kotlin")
     space()
-    sonatype()
+//    sonatype()
 }
