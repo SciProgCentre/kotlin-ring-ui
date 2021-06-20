@@ -1,11 +1,9 @@
 @file:JsModule("@jetbrains/ring-ui/components/header/header")
 
-package ringui.header
+package ringui
 
 import react.RClass
 import react.dom.WithClassName
-import ringui.ButtonProps
-import ringui.IconProps
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/header/header.js
 public external interface HeaderProps : WithClassName {

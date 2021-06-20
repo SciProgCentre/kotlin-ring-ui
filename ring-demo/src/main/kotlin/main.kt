@@ -2,8 +2,6 @@ import kotlinx.browser.document
 import react.dom.p
 import react.dom.render
 import ringui.*
-import ringui.header.Header
-import ringui.header.TrayIcon
 
 // language=SVG
 const val ICON_CONTENT = """<svg width="40" height="40"><rect fill="red" width="40" height="40"/></svg>"""
