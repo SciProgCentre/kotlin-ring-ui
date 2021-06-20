@@ -8,11 +8,10 @@ public fun RBuilder.Tabs(
     handler: RHandler<TabsProps>,
 ) {
     Tabs {
-        active?.let {
-            attrs {
-                selected = active
-            }
+        if (active != null) {
+            attrs.selected = active
         }
+
         handler()
     }
 }
@@ -23,10 +22,9 @@ public fun RBuilder.Tab(
     handler: RHandler<TabProps>,
 ) {
     Tab {
-        attrs {
-            this.title = title
-            this.id = id
-        }
+        attrs.title = title
+        attrs.id = id
+
         handler()
     }
 }
@@ -37,10 +35,8 @@ public fun RBuilder.SmartTabs(
     handler: RHandler<SmartTabsProps>,
 ) {
     SmartTabs {
-        active?.let {
-            attrs {
-                initSelected = active
-            }
+        if (active != null) {
+            attrs.initSelected = active
         }
         handler()
     }
