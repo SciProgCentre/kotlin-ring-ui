@@ -1,4 +1,4 @@
-package ringui.tabs
+package ringui
 
 import react.RBuilder
 import react.RHandler

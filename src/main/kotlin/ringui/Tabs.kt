@@ -1,6 +1,6 @@
 @file:JsModule("@jetbrains/ring-ui/components/tabs/tabs")
 
-package ringui.tabs
+package ringui
 
 import react.RClass
 import react.dom.WithClassName
