@@ -4,7 +4,7 @@ import react.RBuilder
 import react.RHandler
 
 public fun RBuilder.Tabs(
-    active: String? = null,
+    active: String?,
     handler: RHandler<TabsProps>,
 ) {
     Tabs {
@@ -31,7 +31,7 @@ public fun RBuilder.Tab(
 
 
 public fun RBuilder.SmartTabs(
-    active: String? = null,
+    active: String?,
     handler: RHandler<SmartTabsProps>,
 ) {
     SmartTabs {
