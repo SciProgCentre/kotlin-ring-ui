@@ -1,9 +1,9 @@
+@file:JsModule("@jetbrains/ring-ui/components/button/button")
+
 package ringui
 
 import org.w3c.dom.events.MouseEvent
-import react.RBuilder
 import react.RClass
-import react.RHandler
 import react.dom.WithClassName
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/button/button.js
@@ -29,15 +29,5 @@ public external interface ButtonProps : WithClassName {
     public var onMouseDown: (MouseEvent) -> Unit
 }
 
-@JsModule("@jetbrains/ring-ui/components/button/button")
-internal external object ButtonModule {
-    @JsName("default")
-    val Button: RClass<ButtonProps>
-}
-
-
-public fun RBuilder.ringButton(handler: RHandler<ButtonProps>) {
-    ButtonModule.Button {
-        handler()
-    }
-}
+@JsName("default")
+public external val Button: RClass<ButtonProps>
