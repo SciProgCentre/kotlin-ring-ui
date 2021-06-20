@@ -1,23 +1,11 @@
+@file:JsModule("@jetbrains/ring-ui/components/header/header")
+
 package ringui.header
 
-import react.RBuilder
 import react.RClass
-import react.RHandler
 import react.dom.WithClassName
-
-@JsModule("@jetbrains/ring-ui/components/header/header")
-internal external object HeaderModule {
-    @JsName("default")
-    val Header: RClass<HeaderProps>
-    val RerenderableHeader: RClass<HeaderProps>
-    val Logo: RClass<HeaderLogoProps>
-    val Tray: RClass<HeaderTrayProps>
-    val TrayIcon: RClass<WithClassName>
-    val Profile: RClass<WithClassName>
-    val SmartProfile: RClass<WithClassName>
-    val Services: RClass<WithClassName>
-    val SmartServices: RClass<WithClassName>
-}
+import ringui.ButtonProps
+import ringui.IconProps
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/header/header.js
 public external interface HeaderProps : WithClassName {
@@ -25,9 +13,31 @@ public external interface HeaderProps : WithClassName {
     public var theme: String
 }
 
+@JsName("default")
+public external val Header: RClass<HeaderProps>
+public external val RerenderableHeader: RClass<HeaderProps>
 
-public fun RBuilder.ringHeader(handler: RHandler<HeaderProps>) {
-    HeaderModule.Header {
-        handler()
-    }
+// Logo
+public external interface HeaderLogoProps : IconProps
+
+public external val Logo: RClass<HeaderLogoProps>
+
+// Tray
+// https://github.com/JetBrains/ring-ui/blob/master/components/header/tray.js
+public external interface TrayProps : WithClassName
+
+public external val Tray: RClass<TrayProps>
+
+// TrayIcon
+// https://github.com/JetBrains/ring-ui/blob/master/components/header/tray-icon.js
+public external interface TrayIconProps : ButtonProps {
+    public var rotatable: Boolean
 }
+
+public external val TrayIcon: RClass<TrayIconProps>
+
+
+public external val Profile: RClass<WithClassName>
+public external val SmartProfile: RClass<WithClassName>
+public external val Services: RClass<WithClassName>
+public external val SmartServices: RClass<WithClassName>
