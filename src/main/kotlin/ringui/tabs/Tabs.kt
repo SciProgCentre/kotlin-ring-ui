@@ -1,17 +1,9 @@
+@file:JsModule("@jetbrains/ring-ui/components/tabs/tabs")
+
 package ringui.tabs
 
-import react.RBuilder
 import react.RClass
-import react.RHandler
 import react.dom.WithClassName
-
-@JsModule("@jetbrains/ring-ui/components/tabs/tabs")
-internal external object TabsModule {
-    val Tabs: RClass<TabsProps>
-    val Tab: RClass<TabProps>
-    val SmartTabs: RClass<SmartTabsProps>
-    //val CustomItem: RClass<CustomItemProps>
-}
 
 //https://github.com/JetBrains/ring-ui/blob/master/components/tabs/tabs.js
 public external interface TabsProps : WithClassName {
@@ -22,30 +14,21 @@ public external interface TabsProps : WithClassName {
     public var autoCollapse: Boolean
 }
 
-public external interface CustomItemProps : WithClassName
+public external val Tabs: RClass<TabsProps>
 
 public external interface TabProps : WithClassName {
     public var title: dynamic // PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
     public var id: String
 }
 
-public fun RBuilder.ringTabs(active: String? = null, handler: RHandler<TabsProps>) {
-    TabsModule.Tabs {
-        active?.let {
-            attrs {
-                selected = active
-            }
-        }
-        handler()
-    }
+public external val Tab: RClass<TabProps>
+
+public external interface SmartTabsProps : WithClassName {
+    public var initSelected: String
 }
 
-public fun RBuilder.ringTab(title: dynamic, id: String = title.toString(), handler: RHandler<TabProps>) {
-    TabsModule.Tab {
-        attrs {
-            this.title = title
-            this.id = id
-        }
-        handler()
-    }
-}
+public external val SmartTabs: RClass<SmartTabsProps>
+
+public external interface CustomItemProps : WithClassName
+
+public external val CustomItem: RClass<CustomItemProps>
