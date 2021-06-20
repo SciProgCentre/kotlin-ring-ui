@@ -18,16 +18,6 @@ public external interface AlertProps : WithClassName {
     public var type: AlertType
 }
 
-public typealias AlertType = String
-
-public object AlertTypes {
-    public var ERROR: String = "error"
-    public var MESSAGE: String = "message"
-    public var SUCCESS: String = "success"
-    public var WARNING: String = "warning"
-    public var LOADING: String = "loading"
-}
-
 @JsModule("@jetbrains/ring-ui/components/alert/alert")
 internal external object AlertModule {
     @JsName("default")
