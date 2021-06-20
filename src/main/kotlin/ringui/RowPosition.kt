@@ -4,6 +4,7 @@
 
 package ringui
 
+@JsName("null")
 public sealed external interface RowPosition {
     public companion object
 }
