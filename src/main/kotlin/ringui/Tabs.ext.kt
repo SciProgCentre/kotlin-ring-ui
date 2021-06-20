@@ -17,8 +17,8 @@ public fun RBuilder.Tabs(
 }
 
 public fun RBuilder.Tab(
-    title: dynamic,
-    id: String = title.toString(),
+    title: String,
+    id: String = title,
     handler: RHandler<TabProps>,
 ) {
     Tab {

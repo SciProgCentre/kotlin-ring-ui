@@ -8,7 +8,7 @@ import react.dom.WithClassName
 // https://github.com/JetBrains/ring-ui/blob/master/components/icon/icon.js
 public external interface IconProps : WithClassName {
     public var color: String
-    public var glyph: dynamic /* string | func */
+    public var glyph: String /* string | func */
     public var height: Double
     public var size: Double
     public var width: Double
