@@ -4,7 +4,6 @@ import react.dom.render
 import ringui.*
 import ringui.header.Header
 import ringui.header.TrayIcon
-import ringui.Header as IslandHeader
 
 // language=SVG
 const val ICON_CONTENT = """<svg width="40" height="40"><rect fill="red" width="40" height="40"/></svg>"""
@@ -27,7 +26,7 @@ fun main() {
                         IslandHeader {
                             +"This is island header"
                         }
-                        Content {
+                        IslandContent {
                             p { +"This is island content" }
                         }
                     }

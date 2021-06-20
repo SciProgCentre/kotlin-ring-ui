@@ -8,11 +8,11 @@ public fun RBuilder.Island(
     handler: RHandler<IslandContentProps>,
 ) {
     Island {
-        Header {
+        IslandHeader {
             attrs.border = true
 
             +header
         }
-        Content(handler)
+        IslandContent(handler)
     }
 }

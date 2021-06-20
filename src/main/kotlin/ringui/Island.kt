@@ -23,7 +23,8 @@ public external interface IslandHeaderProps : WithClassName {
     public var phase: Number
 }
 
-public external val Header: RClass<IslandHeaderProps>
+@JsName("Header")
+public external val IslandHeader: RClass<IslandHeaderProps>
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/island/content.js
 public external interface IslandContentProps : WithClassName {
@@ -34,4 +35,5 @@ public external interface IslandContentProps : WithClassName {
     public var onScrollToBottom: () -> Unit
 }
 
-public external val Content: RClass<IslandContentProps>
+@JsName("Content")
+public external val IslandContent: RClass<IslandContentProps>
