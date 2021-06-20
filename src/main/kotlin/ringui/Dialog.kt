@@ -1,8 +1,8 @@
+@file:JsModule("@jetbrains/ring-ui/components/dialog/dialog")
+
 package ringui
 
-import react.RBuilder
 import react.RClass
-import react.RHandler
 import react.dom.WithClassName
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/dialog/dialog.js
@@ -23,15 +23,5 @@ public external interface DialogProps : WithClassName {
     public var autoFocusFirst: Boolean
 }
 
-@JsModule("@jetbrains/ring-ui/components/dialog/dialog")
-internal external object DialogModule {
-    @JsName("default")
-    val Dialog: RClass<DialogProps>
-}
-
-public fun RBuilder.ringDialog(show: Boolean, handler: RHandler<DialogProps>) {
-    DialogModule.Dialog {
-        attrs.show = show
-        handler()
-    }
-}
+@JsName("default")
+public external val Dialog: RClass<DialogProps>
