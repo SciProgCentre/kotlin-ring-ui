@@ -23,7 +23,7 @@ public external interface ButtonProps : WithClassName {
     public var href: String
 
     public var icon: dynamic /* string | func */
-    public var iconSize: Number
+    public var iconSize: Double
     public var iconClassName: String
 
     public var onMouseDown: (MouseEvent) -> Unit

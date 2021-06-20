@@ -9,9 +9,9 @@ import react.dom.WithClassName
 public external interface IconProps : WithClassName {
     public var color: String
     public var glyph: dynamic /* string | func */
-    public var height: Number
-    public var size: Number
-    public var width: Number
+    public var height: Double
+    public var size: Double
+    public var width: Double
     public var loading: Boolean
 }
 

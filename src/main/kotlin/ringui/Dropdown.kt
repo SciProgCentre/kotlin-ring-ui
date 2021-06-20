@@ -20,8 +20,8 @@ public external interface DropdownProps : WithClassName {
     public var activeClassName: String
     public var clickMode: Boolean
     public var hoverMode: Boolean
-    public var hoverShowTimeOut: Number
-    public var hoverHideTimeOut: Number
+    public var hoverShowTimeOut: Int
+    public var hoverHideTimeOut: Int
     public var onShow: () -> Unit
     public var onHide: () -> Unit
     public var onMouseEnter: (Event) -> Unit

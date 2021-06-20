@@ -7,7 +7,7 @@ import react.dom.WithClassName
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/alert/alert.js
 public external interface AlertProps : WithClassName {
-    public var timeout: Number
+    public var timeout: Int
     public var onCloseRequest: () -> Unit
     public var onClose: () -> Unit
     public var isShaking: Boolean
