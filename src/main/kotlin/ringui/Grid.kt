@@ -1,18 +1,14 @@
+@file:JsModule("@jetbrains/ring-ui/components/grid/grid")
+
 package ringui
 
 import react.RClass
-import react.RElementBuilder
 import react.RProps
 import react.dom.WithClassName
 
 public external interface GridProps : RProps
 
-public enum class RowPosition {
-    xs,
-    sm,
-    md,
-    lg
-}
+public external val Grid: RClass<GridProps>
 
 public external interface RowProps : GridProps, WithClassName {
     public var reverse: Boolean
@@ -29,6 +25,8 @@ public external interface RowProps : GridProps, WithClassName {
     public var last: RowPosition
 }
 
+public external val Row: RClass<RowProps>
+
 public external interface ColProps : GridProps, WithClassName {
     public var xs: dynamic // number or boolean
     public var sm: dynamic // number or boolean
@@ -41,19 +39,4 @@ public external interface ColProps : GridProps, WithClassName {
     public var reverse: Boolean
 }
 
-
-@JsModule("@jetbrains/ring-ui/components/grid/grid")
-@PublishedApi
-internal external object GridModule {
-    val Grid: RClass<GridProps>
-    val Row: RClass<RowProps>
-    val Col: RClass<ColProps>
-}
-
-public inline val Grid: RClass<GridProps> get() = GridModule.Grid
-
-public inline val RElementBuilder<GridProps>.Row: RClass<RowProps> get() = GridModule.Row
-
-public inline val RElementBuilder<GridProps>.Col: RClass<ColProps> get() = GridModule.Col
-
-
+public external val Col: RClass<ColProps>
