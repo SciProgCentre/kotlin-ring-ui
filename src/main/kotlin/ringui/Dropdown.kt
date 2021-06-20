@@ -1,13 +1,14 @@
+@file:JsModule("@jetbrains/ring-ui/components/dropdown/dropdown")
+
 package ringui
 
 import org.w3c.dom.events.Event
-import react.RBuilder
 import react.RClass
-import react.RHandler
-import react.ReactElement
 import react.dom.WithClassName
 
 public external interface AnchorProps : WithClassName
+
+public external val Anchor: RClass<AnchorProps>
 
 public external interface DropdownProps : WithClassName {
     /**
@@ -28,19 +29,5 @@ public external interface DropdownProps : WithClassName {
     //'data-test': PropTypes.string
 }
 
-@JsModule("@jetbrains/ring-ui/components/dropdown/dropdown")
-public external object DropdownModule {
-    public val Anchor: RClass<AnchorProps>
-
-    @JsName("default")
-    public val Dropdown: RClass<DropdownProps>
-}
-
-
-public fun RBuilder.ringDropdown(anchor: dynamic, handler: RHandler<DropdownProps>): ReactElement =
-    DropdownModule.Dropdown {
-        attrs {
-            this.anchor = anchor
-        }
-        handler()
-    }
+@JsName("default")
+public external val Dropdown: RClass<DropdownProps>
