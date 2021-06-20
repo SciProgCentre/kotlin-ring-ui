@@ -28,14 +28,14 @@ public external interface RowProps : GridProps, WithClassName {
 public external val Row: RClass<RowProps>
 
 public external interface ColProps : GridProps, WithClassName {
-    public var xs: dynamic // number or boolean
-    public var sm: dynamic // number or boolean
-    public var md: dynamic // number or boolean
-    public var lg: dynamic // number or boolean
-    public var xsOffset: Number
-    public var smOffset: Number
-    public var mdOffset: Number
-    public var lgOffset: Number
+    public var xs: Int // number or boolean
+    public var sm: Int // number or boolean
+    public var md: Int // number or boolean
+    public var lg: Int // number or boolean
+    public var xsOffset: Int
+    public var smOffset: Int
+    public var mdOffset: Int
+    public var lgOffset: Int
     public var reverse: Boolean
 }
 
