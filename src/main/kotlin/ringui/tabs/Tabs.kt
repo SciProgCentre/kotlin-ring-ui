@@ -31,7 +31,7 @@ public external interface TabProps : WithClassName {
 
 public fun RBuilder.ringTabs(active: String? = null, handler: RHandler<TabsProps>) {
     TabsModule.Tabs {
-        active?.let{
+        active?.let {
             attrs {
                 selected = active
             }

@@ -11,12 +11,12 @@ fun main() {
                     attrs {
                         xs = 6
                     }
-                    Island{
-                        Header{
+                    Island {
+                        Header {
                             +"This is island header"
                         }
-                        Content{
-                            p{+"This is island content"}
+                        Content {
+                            p { +"This is island content" }
                         }
                     }
                 }

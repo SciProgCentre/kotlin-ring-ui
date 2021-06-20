@@ -5,7 +5,7 @@ import react.RElementBuilder
 import react.RProps
 import react.dom.WithClassName
 
-public external interface GridProps: RProps
+public external interface GridProps : RProps
 
 public enum class RowPosition {
     xs,
