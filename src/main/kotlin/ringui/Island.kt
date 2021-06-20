@@ -1,9 +1,7 @@
 package ringui
 
-import react.RBuilder
 import react.RClass
 import react.RElementBuilder
-import react.RHandler
 import react.dom.WithClassName
 
 // https://github.com/JetBrains/ring-ui/blob/master/components/island/header.js
@@ -48,16 +46,3 @@ public inline val RElementBuilder<IslandProps>.Header: RClass<IslandHeaderProps>
 
 public inline val RElementBuilder<IslandProps>.Content: RClass<IslandContentProps>
     get() = IslandModule.Content
-
-
-public fun RBuilder.islandWithContent(header: String, handler: RHandler<IslandContentProps>) {
-    Island {
-        Header {
-            attrs {
-                border = true
-            }
-            +header
-        }
-        Content(handler)
-    }
-}
