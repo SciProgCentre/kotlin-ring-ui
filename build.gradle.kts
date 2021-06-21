@@ -34,6 +34,6 @@ kotlin {
 
 ksciencePublish{
     github("ring-ui-kotlin")
-    space()
+    space("https://maven.pkg.jetbrains.space/mipt-npm/p/mipt-npm/maven")
 //    sonatype()
 }
