@@ -1,5 +1,7 @@
 [![Kotlin JS IR supported](https://img.shields.io/badge/Kotlin%2FJS-IR%20supported-yellow)](https://kotl.in/jsirsupported)
 
+**Moved to https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-ring-ui**
+
 # Ring-ui
 [Ring-ui](https://github.com/JetBrains/ring-ui) is an official open-source JetBrains library for writing web interfaces for JetBrains and not-so-JetBrains products and sites. This library provides thin layer wrapper to use it in Kotlin-JS with Kotlin-React framework.
 
